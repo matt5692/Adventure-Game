@@ -4,14 +4,15 @@ import Location.Location;
 
 public class Monster {
     Location loc;
-    private int hitPoints, baseAttack, baseDefence;
+    private int hitPoints, baseAttack, baseDefence, level;
     private String monsterName;
 
-    public Monster(Location loc, int hitPoints, int baseAttack, int baseDefence, String monsterName){
+    public Monster(Location loc, int hitPoints, int baseAttack, int baseDefence, int level, String monsterName){
         this.loc = loc;
         this.hitPoints = hitPoints;
         this.baseAttack = baseAttack;
         this.baseDefence = baseDefence;
+        this.level = level;
         this.monsterName = monsterName;
     }
 

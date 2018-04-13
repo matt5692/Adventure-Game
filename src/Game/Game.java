@@ -1,4 +1,5 @@
 package Game;
+import java.util.Scanner;
 import Character.*;
 import Encounter.Encounter;
 import Location.*;
@@ -11,15 +12,24 @@ public class Game {
     }
 
     public void playerTurn(Player p){
-        System.out.println("What would you like to do? (You can move, attack, or use an item)");
+        Scanner scan = new Scanner(System.in);
+        System.out.println("What would you like to do? (You can move, attack,use an item, or wait)");
     }
 
-    public boolean playerPhase(Cavalier cavalier, Knight knight, Mercenary mercenary, Tactician tactician, Map map){
-
+    public void enemyTurn(Monster m){
 
     }
 
-    public boolean enemyPhase(){
+    public void playerPhase(Cavalier cavalier, Knight knight, Mercenary mercenary, Tactician tactician, Map map){
+        playerTurn(cavalier);
+        playerTurn(knight);
+        playerTurn(mercenary);
+        playerTurn(tactician);
+    }
 
+    public void enemyPhase(Monster levelThree, Monster levelFive, Monster levelTen){
+        enemyTurn(levelThree);
+        enemyTurn(levelFive);
+        enemyTurn(levelTen);
     }
 }
