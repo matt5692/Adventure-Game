@@ -1,4 +1,5 @@
 package Character;
+import java.util.Scanner;
 import Location.Location;
 public abstract class Player {
     Location loc;
@@ -17,7 +18,27 @@ public abstract class Player {
     }
 
 
-    public void movePlayer(int rowShift, int colShift) {
+    public void movePlayer(int rowShift, int colShift, Location.Map map) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("You can move " + moveSpaces + " spaces. Which direction would you like to go? (left, right, up down");
+        String response = scan.nextLine();
+        switch (response){
+            case "left":
+                System.out.println("You can move " + moveSpaces + " spaces. How many spaces would you like to go");
+                int spaces = scan.nextInt();
+                if(map.isValidLocation(loc) && spaces <= moveSpaces){
+                    loc.setRow(loc.getRow() + spaces);
+                }
+                break;
+            case "right":
+
+
+
+        }
+        System.out.println("");
+
+
         loc.setRow(loc.getRow()+rowShift);
         loc.setCol(loc.getCol()+colShift);
     }

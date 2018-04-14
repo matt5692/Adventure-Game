@@ -29,6 +29,10 @@ public class Map {
         }
     }
 
+    public boolean isValidLocation(Location l){
+
+    }
+
 
     public void inputPlayerLoc(Location l) {
         playerRow = l.getRow();
