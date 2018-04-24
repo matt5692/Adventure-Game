@@ -22,7 +22,7 @@ public abstract class Player {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("You can move " + moveSpaces + " spaces. Which direction would you like to go? (left, right, up down");
-        String response = scan.nextLine();
+        String response = scan.nextLine().toLowerCase();
         switch (response){
             case "left":
                 System.out.println("You can move " + moveSpaces + " spaces. How many spaces would you like to go");
