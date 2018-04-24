@@ -3,9 +3,9 @@ package Location;
 public class Location {
     private int row, col;
 
-    public Location (int r, int c) {
-        row=r;
-        col=c;
+    public Location (int row, int col) {
+        this.row=row;
+        this.col=col;
     }
 
     public int getRow() {
